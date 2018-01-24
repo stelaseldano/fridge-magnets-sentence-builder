@@ -1,0 +1,32 @@
+{
+  "name": "fridge-magnet-sentence-builder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stelaseldano/fridge-magnet-sentence-builder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stelaseldano/fridge-magnet-sentence-builder/issues"
+  },
+  "homepage": "https://github.com/stelaseldano/fridge-magnet-sentence-builder#readme",
+  "devDependencies": {
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.2.0",
+    "gulp-less": "^3.4.0",
+    "less": "^2.7.3",
+    "less-plugin-clean-css": "^1.5.1",
+    "stellar-less": "github:stelaseldano/stellar"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "mustache": "^2.3.0"
+  }
+}
