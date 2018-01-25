@@ -5,7 +5,7 @@ var gulp = require('gulp');
 var del = require('del');
 
 gulp.task('clean', function(callback) {
-	del(['ship/**'], callback);
+	del(['ship/*'], callback);
 });
 
 // process html
@@ -48,12 +48,6 @@ gulp.task('connect', function() {
 	});
 });
 
-// task: default
-gulp.task('default', ['clean'], function() {
-	gulp.start([
-		'html',
-		'less',
-		'connect',
-		'watch'
-	]);
-});
+
+// the default task
+gulp.task('default', ['watch', 'connect']);
