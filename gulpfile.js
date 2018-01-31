@@ -20,7 +20,6 @@ var less = require('gulp-less');
 var LessPluginCleanCss = require('less-plugin-clean-css');
 var cleanCss = new LessPluginCleanCss({advanced: true});
 
-
 gulp.task('less', function() {
 	gulp.src('styles/*.less')
 		.pipe(less({
@@ -30,11 +29,18 @@ gulp.task('less', function() {
 		.pipe(connect.reload());
 });
 
+// process scripts
+gulp.task('scripts', function() {
+	gulp.src('scripts/*.js')
+		.pipe(gulp.dest('ship/scripts'))
+		.pipe(connect.reload());
+});
+
 // task: watch
 gulp.task('watch', function() {
 	gulp.watch('index.html', ['html']);
-	gulp.watch('styles/**/*', ['less']);
-	gulp.watch('scripts/**/*', ['scripts']);
+	gulp.watch('styles/*', ['less']);
+	gulp.watch('scripts/*', ['scripts']);
 });
 
 // connect server

@@ -5,11 +5,15 @@ FMSB is a tool for experimental linguistic purposes using drag and drop interfac
 
 ## Cloning and running the project
 
+
 Clone the repo:
 
 `git clone [repository]`
 
+Navigate to the project's directory:
+
 `cd [repository]`
+
 
 Install the dependencies:
 
@@ -18,9 +22,11 @@ Install the dependencies:
 If you do not have npm installed on your machine you can get information on how to install it from [their website][1].
 
 
-Starting the app:
+Run gulp to start the app:
 
-Run `gulp` from the project's main directory
+in the command-line (from the project's directiry) type
+
+`gulp`
 
 Open the browser and type `localhost:9000` in the address bar to see the webpage.
 

@@ -4,13 +4,17 @@
 		<meta charset="UTF-8" />
 
 		<!-- styles -->
-		<link rel="stylesheet" type="text/css" href="build/styles/styles.css" />
+		<link rel="stylesheet" type="text/css" href="styles/styles.css" />
+
+		<!-- fonts -->
+		 <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700|Quicksand:400,500,700" rel="stylesheet"> 
 
 		<!-- js dependencies -->
-		<script src="../../node_modules/jquery/dist/jquery.min.js"></script>
-		<script src="../../node_modules/mustache/mustache.min.js"></script>
+		<!-- <script src="../../node_modules/jquery/dist/jquery.min.js"></script> -->
+		<!-- <script src="../../node_modules/mustache/mustache.min.js"></script> -->
 
 		<!-- scripts -->
+		<script src="scripts/dnd.js"></script>
 		<script src="scripts/main.js"></script>
 		<script src="scripts/exp.js"></script>
 		<script src="scripts/views.js"></script>
@@ -20,7 +24,34 @@
 		<noscript>This webpage requires JavaScript. To continue, please enable your JavaScript and reload the page.</noscript>
 
 		<main>
-			Loading...
+			<h2>Experiment's title | trial</h2>
+
+			<div class="progress-bar">
+				<p><span>progress: </span>2/30</p>
+			</div>
+
+			<div class='stimulus-container'>
+				<div class='img'></div>
+			</div>
+
+			<div class='fridge'>
+				<div class="words-container">
+					<div class='word' draggable="true" id='words' data-effect-allowed="copy">words</div>
+					<div class='word' draggable="true" id='to'>to</div>
+					<div class='word' draggable="true" id='be'>be</div>
+					<div class='word' draggable="true" id='assembled'>assembled</div>
+					<div class='word' draggable="true" >in</div>
+					<div class='word' draggable="true" >a</div>
+					<div class='word' draggable="true" >sentence</div>
+				</div>
+				<div class='dropzone-container'>
+					<div id='dropzone'></div>
+					<button>next</button>
+				</div>
+			</div>
+
+			<form>
+			</form>
 		</main>
 	</body>
 </html>

@@ -1,5 +1,114 @@
 @import "node_modules/stellar-less/stellar";
 
-main {
-	background: pink;
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+h1, h2, h3, p, li, a, label, span {
+	font-family: 'Nunito Sans', sans-serif;
+	color: #333;
+	font-weight: 500;
+}
+
+button {
+	border: 2px solid #333;
+	border-radius: 50%;
+	background-color: transparent;
+	color: #333;
+	font-weight: bold;
+	height: 60px;
+	padding: 4px 8px;
+	ourline: none;
+	width: 60px;
+
+	&:hover {
+		border: 3px solid tomato;
+		color: tomato;
+	}
+}
+
+.stimulus-container {
+	min-height: 300px;
+	width: 100%;
+
+	.img {
+		background: #999;
+		height: 300px;
+		margin: 20px auto;
+		width: 450px;
+	}
+}
+
+.fridge {
+	.row(@center; @center);
+
+	background: #ededed;
+	margin: 0 auto;
+
+	.words-container {
+		box-sizing: border-box;
+		padding: 10px;
+		height: 30vh;
+		min-height: 200px;
+		width: 40%;
+	}
+
+	.dropzone-container {
+		.row(@left; @center);
+
+		box-sizing: border-box;
+		background: white;
+		margin: 20px;
+		padding: 20px;
+		width: 50%;
+
+		.dropzone {
+			border-radius: 2px;
+			box-sizing: border-box;
+			padding: 0px;
+			margin: 5px;
+			height: 50px;
+			width: 100px;
+
+			&.allowed {
+				border: 1px dashed tomato;
+			}
+
+			&.default {
+			}
+		}
+
+		button {
+			display: none;
+			.naughty(column; @right);
+		}
+	}
+}
+
+.word {
+	background: tomato;
+	border-bottom: 4px solid darken(tomato, 7%);
+	border-radius: 2px;
+	box-shadow: 2px 2px 2px 1px #9a9a9a;
+	color: white;
+	cursor: pointer;
+	display: inline-block;
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 700;
+	font-size: 14px;
+	letter-spacing: 0.5px;
+	margin: 4px;
+	padding: 3px 9px;
+	text-transform: uppercase;
+
+	&.visible {
+		display: none;
+	}
+
+	&:hover {
+		box-shadow: 2px 2px 2px 2px #bbb;
+		transform: translateY(-3px);
+	}
 }
