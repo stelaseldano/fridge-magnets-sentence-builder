@@ -9,26 +9,36 @@
 		<!-- fonts -->
 		 <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700|Quicksand:400,500,700" rel="stylesheet"> 
 
-		<!-- js dependencies -->
-		<!-- <script src="../../node_modules/jquery/dist/jquery.min.js"></script> -->
-		<!-- <script src="../../node_modules/mustache/mustache.min.js"></script> -->
+		<!-- Mustache -->
+		<script src="scripts/mustache.min.js"></script>
 
 		<!-- scripts -->
+		<script src="scripts/config.js"></script>
 		<script src="scripts/dnd.js"></script>
 		<script src="scripts/main.js"></script>
 		<script src="scripts/exp.js"></script>
 		<script src="scripts/views.js"></script>
+
 	</head>
 
 	<body>
 		<noscript>This webpage requires JavaScript. To continue, please enable your JavaScript and reload the page.</noscript>
 
-		<main>
-			<h2>Experiment's title | trial</h2>
-
-			<div class="progress-bar">
-				<p><span>progress: </span>2/30</p>
+		<header>
+			<div>
+				<h1 id="config-title">Experiment</h1>
+				<h2 id="config-institution">Institution</h2>
 			</div>
+
+			<div class="progress-bar nodisplay">
+				<p><span>progress: </span><span id='current-trial'></span>/<span id='total-trials'></span></p>
+			</div>
+		</header>
+
+		<main id='main'></main>
+
+		<script id="trial-view" type="x-tmpl-mustache">
+		<div class='view'>
 
 			<div class='stimulus-container'>
 				<div class='img'></div>
@@ -46,12 +56,34 @@
 				</div>
 				<div class='dropzone-container'>
 					<div id='dropzone'></div>
-					<button>next</button>
 				</div>
-			</div>
+				<button class='next'>next</button>
+			</div>	
+		</div>
+		</script>
 
-			<form>
-			</form>
-		</main>
+		<script id="intro-view" type="x-tmpl-mustache">
+		<div class='view'>
+			<h2 id="config-intro-title" class="title">{{ title }}</h2>
+			<p id="config-intro-text" class="text">{{ text }}</p>
+			<button id='config-intro-button' class='next'>{{ button }}</button>
+		</div>
+		</script>
+
+		<script id="instructions-view" type="x-tmpl-mustache">
+		<div class='view'>
+			<h2 id="config-instructions-title" class="title">{{ title }}</h2>
+			<p id="config-instructions-text" class="text">{{ text }}</p>
+			<button id='config-instructions-button' class='next'>{{ button }}</button>
+		</div>
+		</script>
+
+		<script id="thanks-view" type="x-tmpl-mustache">
+		<div class='view'>
+			<h2 id="config-thanks-title" class="title">{{ title }}</h2>
+			<p id="config-thanks-text" class="text">{{ text }}</p>
+		</div>
+		</script>
+
 	</body>
 </html>

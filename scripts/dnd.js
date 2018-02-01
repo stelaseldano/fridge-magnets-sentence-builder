@@ -1,4 +1,4 @@
-function initDnd() {
+function initMagnets() {
 	var height, width;
 
 	// make th words draggable
@@ -44,22 +44,25 @@ function initDnd() {
 			var target = event.target;
 			var id = event.dataTransfer.getData("word");
 			var dragged = document.getElementById(id);
-			var insertDropzone = false;
+			var dropzoneRemoved = true;
 			target.parentNode.insertBefore(dragged, target);
 			target.classList.remove('allowed');
 
-	/*		dragged.addEventListener('dragenter', function() {
-				insertDropzone = true;
-
-				if (insertDropzone === true) {
+/*			dragged.addEventListener('dragenter', function() {
+				if (dropzoneRemoved === true) {
 					dropzone = createDropzone(dragged);
-
-					dropzone.addEventListener('dragleave', function() {
-						insertDropzone = false;
-						dropzone.remove();
-					});
+					dropzoneRemoved = false;					
 				}
-			});*/
+
+				dropzone.addEventListener('dragleave', function() {
+					dropzone.remove();
+					dropzoneRemoved = true;
+				});
+			});
+
+			if (insertDropzone === true) {
+				insertDropzone = false;
+			}*/
 
 		});
 

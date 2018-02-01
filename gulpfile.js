@@ -36,6 +36,11 @@ gulp.task('scripts', function() {
 		.pipe(connect.reload());
 });
 
+gulp.task('dependencies', function() {
+	gulp.src('node_modules/mustache/mustache.min.js')
+		.pipe(gulp.dest('ship/scripts'))
+});
+
 // task: watch
 gulp.task('watch', function() {
 	gulp.watch('index.html', ['html']);

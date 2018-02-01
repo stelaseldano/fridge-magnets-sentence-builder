@@ -29,6 +29,74 @@ button {
 	}
 }
 
+header {
+	.row(@spread);
+
+	background-color: #444;	
+	box-sizing: border-box;
+	border-bottom: 7px solid lighten(tomato, 7%);
+	padding: 10px 40px;
+
+	h1,
+	h2 {
+		color: white;
+	}
+
+	&.trial {
+		background: white;
+		border: none;
+
+		h1,
+		h2 {
+			color: #444;
+		}
+	}
+}
+
+h1, h2 {
+	margin: 0;
+}
+
+h1 {
+	font-size: 1.5em;
+}
+
+h2 {
+	text-transform: uppercase;
+	font-size: 0.8em;
+}
+
+// classes used by js
+.nodisplay {
+	display: none;
+}
+
+main {
+	box-sizing: border-box;
+	padding: 40px 30px;
+
+	&.trial {
+		padding: 0;
+	}
+}
+
+.title {
+	font-size: 1.2em;
+	max-width: 740px;
+	margin: 20px auto;
+}
+
+.text {
+	min-height: 300px;
+	max-width: 740px;
+	margin: 0 auto;
+}
+
+.next {
+	display: block;
+	margin: 30px auto;
+}
+
 .stimulus-container {
 	min-height: 300px;
 	width: 100%;
@@ -45,10 +113,15 @@ button {
 	.row(@center; @center);
 
 	background: #ededed;
+	border-top: 3px solid lighten(tomato, 7%);
+
+	box-sizing: border-box;
+	padding: 20px 30px;
 	margin: 0 auto;
 
 	.words-container {
 		box-sizing: border-box;
+		border-right: 3px solid lighten(tomato, 7%);
 		padding: 10px;
 		height: 30vh;
 		min-height: 200px;
@@ -60,9 +133,9 @@ button {
 
 		box-sizing: border-box;
 		background: white;
-		margin: 20px;
+		height: 30vh;
 		padding: 20px;
-		width: 50%;
+		width: 40%;
 
 		.dropzone {
 			border-radius: 2px;
@@ -80,8 +153,7 @@ button {
 			}
 		}
 
-		button {
-			display: none;
+		.next{
 			.naughty(column; @right);
 		}
 	}
